@@ -19,17 +19,34 @@
 
 
 #老師最佳解答區
+#password = 'a123456'
+#i = 3 # 剩餘機會
+#while True:
+#	pwd = input('請輸入密碼： ')
+#	if pwd == password:
+#		print('登入成功！')
+#		break #逃出迴圈
+#	else:
+#		i = i - 1
+#		print('密碼錯誤！ 還有' , i, '次機會')
+#		if i == 0:
+#			break
+
+
+# 不用無限迴圈 , 老師進階修改 去掉0次機會顯示
 password = 'a123456'
 i = 3 # 剩餘機會
-while True:
+while i > 0:
+	i = i - 1
 	pwd = input('請輸入密碼： ')
 	if pwd == password:
 		print('登入成功！')
 		break #逃出迴圈
 	else:
-		i = i - 1
-		print('密碼錯誤！ 還有' , i, '次機會')
-		if i == 0:
-			break
+		print('密碼錯誤！')
+		if i > 0:
+			print('還有' , i, '次機會')
+		else:
+			print('帳號已鎖住！')
 
 
